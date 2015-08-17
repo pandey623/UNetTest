@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 488514}
   - 20: {fileID: 2028992}
   - 81: {fileID: 8168812}
+  - 114: {fileID: 11418812}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -31,6 +32,7 @@ GameObject:
   - 82: {fileID: 8259846}
   - 114: {fileID: 11459530}
   - 114: {fileID: 11490986}
+  - 114: {fileID: 11443978}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -99,7 +101,7 @@ Camera:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 133054}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
@@ -178,7 +180,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 133054}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!82 &8259846
 AudioSource:
   m_ObjectHideFlags: 1
@@ -248,13 +250,58 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &11444128
+--- !u!114 &11418812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 172
+    i1: 98
+    i2: 66
+    i3: 42
+    i4: 166
+    i5: 193
+    i6: 118
+    i7: 244
+    i8: 26
+    i9: 19
+    i10: 232
+    i11: 124
+    i12: 252
+    i13: 28
+    i14: 49
+    i15: 237
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
+--- !u!114 &11443978
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 139352}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ac75af395ae304a972dc9d5f97fba7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FPSCharacterCam: {fileID: 2028992}
+  audioListener: {fileID: 8168812}
+--- !u!114 &11444128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139352}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
   m_Name: 
@@ -400,7 +447,7 @@ CharacterController:
   m_GameObject: {fileID: 139352}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Height: 1.79999995
   m_Radius: .5
@@ -415,7 +462,19 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: FPSCharacterCam
+      value: 
+      objectReference: {fileID: 2028992}
+    - target: {fileID: 0}
+      propertyPath: audioListener
+      value: 
+      objectReference: {fileID: 8168812}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 139352}
