@@ -452,7 +452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_NetworkPort: 7777
-  m_NetworkAddress: localhost
+  m_NetworkAddress: 192.168.179.3
   m_DontDestroyOnLoad: 1
   m_RunInBackground: 1
   m_SendPeerInfo: 0
@@ -485,7 +485,7 @@ MonoBehaviour:
     m_MaxSentMessageQueueSize: 128
     m_IsAcksLong: 0
     m_Channels: []
-  m_Channels: 
+  m_Channels: 0500000000000000
   m_UseSimulator: 0
   m_SimulatedLatency: 1
   m_PacketLossPercentage: 0
